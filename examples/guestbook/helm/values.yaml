@@ -3,12 +3,12 @@ frontend:
 
   image:
     repository: registry.cn-hangzhou.aliyuncs.com/haoshuwei24/frontend
-    tag: "v1"
+    tag: "v2"
 
   envVars:
     REGION: "cn-beijing"
 
-  service:
+  service:s
     type: NodePort
     port: 80
     nodePort: 30020
