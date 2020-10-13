@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  template:
+    spec:
+      containers:
+        - name: php-redis
+          image: registry.cn-hangzhou.aliyuncs.com/haoshuwei24/frontend:v1
+          env:
+            - name: REGION
+              value: cn-beijing

@@ -1,0 +1,38 @@
+frontend:
+  replicaCount: 3
+
+  image:
+    repository: registry.cn-hangzhou.aliyuncs.com/haoshuwei24/frontend
+    tag: "v2"
+
+  envVars:
+    REGION: "cn-beijing"
+
+  service:
+    type: NodePort
+    port: 80
+    nodePort: 30020
+
+redis:
+
+  master:
+    replicaCount: 1
+
+    image:
+      repository: registry.cn-hangzhou.aliyuncs.com/haoshuwei24/redis
+      tag: "6.0.8"
+
+    service:
+      type: ClusterIP
+      port: 6379
+
+  slave:
+    replicaCount: 2
+
+    image:
+      repository: registry.cn-hangzhou.aliyuncs.com/haoshuwei24/redis-slave
+      tag: "v3"
+
+    service:
+      type: ClusterIP
+      port: 6379

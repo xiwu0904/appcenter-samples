@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+  labels:
+    app: guestbook
+    tier: frontend
+spec:
+  # uncomment the following line if you want to use a LoadBalancer
+  # type: LoadBalancer
+  type: {{ .Values.frontend.service.type }}
+  ports:
+    - port: {{ .Values.frontend.service.port }}
+      nodePort: {{ .Values.frontend.service.nodePort }}
+  selector:
+    app: guestbook
+    tier: frontend
