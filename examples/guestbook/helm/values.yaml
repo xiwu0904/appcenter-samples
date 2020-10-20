@@ -3,7 +3,7 @@ frontend:
 
   image:
     repository: registry.cn-hangzhou.aliyuncs.com/haoshuwei24/frontend
-    tag: "v2"
+    tag: "v1"
 
   envVars:
     REGION: "cn-beijing"
