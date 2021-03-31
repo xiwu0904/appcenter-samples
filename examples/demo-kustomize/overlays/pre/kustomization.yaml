@@ -5,4 +5,4 @@ patchesStrategicMerge:
 images:
 - name: registry.cn-hangzhou.aliyuncs.com/acs/rollouts-demo
   newName: registry.cn-hangzhou.aliyuncs.com/acs/rollouts-demo
-  newTag: blue
+  newTag: green

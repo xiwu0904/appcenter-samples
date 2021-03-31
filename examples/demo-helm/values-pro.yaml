@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: registry.cn-hangzhou.aliyuncs.com/acs/rollouts-demo
-  tag: green
+  tag: blue
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
